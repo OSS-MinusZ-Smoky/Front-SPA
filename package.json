@@ -1,0 +1,37 @@
+{
+  "name": "front-spa",
+  "version": "1.0.0",
+  "description": "this is Front-SPA web service developed by React Framework.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot",
+    "production": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSS-MinusZ-Smoky/Front-SPA.git"
+  },
+  "author": "MinusZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OSS-MinusZ-Smoky/Front-SPA/issues"
+  },
+  "homepage": "https://github.com/OSS-MinusZ-Smoky/Front-SPA#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "prop-types": "^15.6.2",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "typeface-roboto": "0.0.54"
+  }
+}
