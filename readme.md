@@ -26,23 +26,23 @@ Directory Structure
 -------------------
 ```
 
-|- - - components  
-|          | -- /component_1 
-|          | -- /component_2
-|          | -- ... other components ...
-|          | -- App.jsx (this jsx file is entry point of webpack.config.js)
-|
-|
-|- - - pulic  
-|        | -- /bundle (the target path of webpack output)
-|        | -- index.html (SPA base html)
-|
-|     
-|- - - .babelrc (babel preset config file)
-|- - - .gitignore 
-|- - - package.json  
-|- - - ReadMe.md  
-|- - - webpack.config.js (webpack config file)
+{In Project Direcrtory}
+│
+├─ components  
+│  ├─ component_1 
+│  ├─ component_2
+│  ├─ ... other components ...
+│  └─ App.jsx (this jsx file is entry point of webpack.config.js)
+│
+├─ pulic  
+│  ├─ /bundle (the target path of webpack output)
+│  └─ index.html (SPA base html)
+│
+├─ .babelrc (babel preset config file)
+├─ .gitignore 
+├─ package.json  
+├─ ReadMe.md  
+└─ webpack.config.js (webpack config file)
 
 ```
 
