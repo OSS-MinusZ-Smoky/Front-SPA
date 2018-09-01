@@ -6,7 +6,7 @@ Description
 
 >This repository is the space for the monitoring system we are developing. The main library used in the project is the React view framework and introduces webpack , babel module for development efficiency and transpile.
   
->You need to install and configure several modules for initial development, but NPM Package Manager will automatically configure it using the recorded installation history, so if you want to participate in this project newly, you can write only two commands on the command line.
+>You need to install and configure several modules for initial development, but NPM Package Manager will automatically configure it using the recorded installation history, so if you want to participate in this project newly, you can start the project only two commands on the command line.
 
 Installation
 ------------
@@ -49,5 +49,4 @@ Directory Structure
 Tutorial
 --------
 
-> Web packdevelopment server uses HMR function. If you introduce a new React component or modify existing code, the development server automatically compiles the modifications and refreshes the web browser.
-
+> Webpack development server uses HMR Plugin. If you introduce a new React component or modify existing code, the development server automatically compiles the modifications and refreshes the web browser.
