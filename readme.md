@@ -14,7 +14,7 @@ Installation
 
   /* ./{In Project Directory} */
 
-    $ npm install --save
+    $ npm install
     ...(It will take a while)
 
     $ npm run dev
