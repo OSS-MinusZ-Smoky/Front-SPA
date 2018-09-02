@@ -1,4 +1,6 @@
-/* 
+/*
+  forked from gokulkrishh/media-query.css
+  
   ##Device = Desktops
   ##Screen = 1281px to higher resolution desktops
 */
@@ -17,7 +19,7 @@
 @media (min-width: 1025px) and (max-width: 1280px) {
   
  
-  
+
 }
 
 /* 
