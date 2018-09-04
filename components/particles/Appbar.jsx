@@ -22,6 +22,7 @@ class Appbar extends React.Component{
   // 유저입력이벤트가 발생했을때 동작하는 핸들러 함수에 대한 내용을 정의합니다.
   handleContryInput(event){
 
+  // 현재 머금고있는 contry 라는 상태를 input의 value로 설정하고 콘솔에 나타냅니다.
    this.setState({
      contry : event.target.value
    },()=>{
@@ -30,6 +31,7 @@ class Appbar extends React.Component{
    
   
   }
+  // Appbar 컴포넌트를 어디에선가 도입하여 이용할 때 다음과 같이 반환합니다.
   render(){
 
     return(
@@ -49,4 +51,5 @@ class Appbar extends React.Component{
   }
 }
 
+// 외부에서 도입가능하도록 해당 모듈을 export 합니다.
 export default Appbar;
