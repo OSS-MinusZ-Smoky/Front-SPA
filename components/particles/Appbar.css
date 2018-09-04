@@ -1,0 +1,108 @@
+/*
+  forked from gokulkrishh/media-query.css
+  
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+.Font-Roboto{
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 1281px) {
+  
+ .Appbar-Grid-Container{
+   
+  height : 60px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  border : 1px solid black;
+
+}
+
+  .Appbar-Grid-Container__Item{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .Appbar-Grid-Container__Item__Text{
+    font-size: 30px;
+    font-style: italic;
+  }
+
+
+  .Appbar-Grid-Container__Item__Input{
+
+    border : none;
+    padding-left: 15%;
+    font-size: 20px;
+
+  }  
+
+  .Appbar-Grid-Container__Item__Input:focus , :active{
+    outline: none;
+  }
+
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+ 
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+ 
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  
+  
+}
+
