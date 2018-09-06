@@ -3,7 +3,6 @@ import Map from 'react-js-google-maps';
 import './Appbody.css';
 
 class Appbody extends React.Component{
- 
   constructor(props){
 
     super(props);
@@ -48,7 +47,7 @@ class Appbody extends React.Component{
   }
 
   render(){
-    if(this.props.usedIn == "index"){
+    
       return(
         <div className="Appbody-Grid-Container">
 
@@ -103,36 +102,6 @@ class Appbody extends React.Component{
           </div>
         </div>
       )
-    }
-  else if(this.props.usedIn == "main"){
-    return (
-      <div className="AppbodyMain-Grid-Container">
-
-        <div className="AppbodyMain-Grid-Container__Item">
-        
-        </div>
-
-        <div className="AppbodyMain-Grid-Container__Item-Nested">
-          <div className="AppbodyMain-Grid-Container__Item-Nested__Item">
-
-          </div>
-          <div className="AppbodyMain-Grid-Container__Item-Nested__Item">
-
-          </div>
-        </div>
-
-        <div className="AppbodyMain-Grid-Container__Item-Nested">
-          <div className="AppbodyMain-Grid-Container__Item-Nested__Item">
-
-          </div>
-          <div className="AppbodyMain-Grid-Container__Item-Nested__Item">
-
-          </div>
-        </div>
-
-      </div>
-    )
-  }
   }
 }
 

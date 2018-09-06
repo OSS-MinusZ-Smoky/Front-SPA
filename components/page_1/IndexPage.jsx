@@ -1,11 +1,10 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import SharedStyle from '../SharedStyles/SharedStyle.css';
 import Appbar from '../particles/Appbar.jsx';
 import Appbody from '../particles/Appbody.jsx';
 
 let myHeaders = new Headers();
-let fetchUrl = 'http://18.191.27.239:8888/country='
+let fetchUrl = 'http://18.191.27.239:8888/country=';
 
 const myInit =
  { 
@@ -29,7 +28,7 @@ class IndexPage extends React.Component{
       defaultCenter : {lat : 40.463667 , lng : -3.74922},
       eventZoom : null,
       eventCenter : null,
-      selectContry : false
+      
     }
     this.handleContryInput = this.handleContryInput.bind(this);
   }
@@ -44,9 +43,12 @@ class IndexPage extends React.Component{
     
     // fetch() -> Get respose -> lists info by state changing
     if(event.keyCode == 13 && this.state.eventZoom){
-      this.setState({
-        selectContry : true
-      })
+      
+      let HTTP_REQUEST = new XMLHttpRequest();
+      HTTP_REQUEST.open('GET','/go',true);
+      HTTP_REQUEST.send(null);
+      window.location.href = './go'
+      
     }
 
     if(event.target.value.length >= 3 && event.keyCode != 13){
@@ -91,12 +93,12 @@ class IndexPage extends React.Component{
 
   render(){
 
-    if(this.state.selectContry != true){
+    
       return(
 
         <div className="Wrapper">
-          <Appbar usedIn="index" brand="SMOKY" phrase="coder" />
-          <Appbody usedIn="index"
+          <Appbar brand="SMOKY" phrase="coder" />
+          <Appbody
           defaultCenter={this.state.defaultCenter}
           defaultZoom={this.state.defaultZoom}
           eventZoom={this.state.eventZoom}
@@ -111,17 +113,8 @@ class IndexPage extends React.Component{
         </div>
         
       )
-  }
-  else{
-    return(
-      <Redirect to={{
-        pathname : '/main',
-        state : {
-          contry : this.state.contryName
-        }
-      }}/>
-    )
-  }
+  
+
   }
 }
 

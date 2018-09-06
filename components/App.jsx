@@ -1,20 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router , Route , Link} from 'react-router-dom';
 import IndexPage from './page_1/IndexPage.jsx'
-import MainPage from './page_2/MainPage.jsx'
 
 class App extends React.Component{
+  
   render(){
 
     return(
-        <Router>
-          <div>
-            <Route exact path="/" component={IndexPage} />
-            <Route exact path="/main" component={MainPage} />
-          </div>
-        </Router>
-      
+     <IndexPage />  
     )
 
   }
