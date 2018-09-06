@@ -8,11 +8,10 @@ class App extends React.Component{
   render(){
 
     return(
-      
         <Router>
           <div>
             <Route exact path="/" component={IndexPage} />
-            <Route path="/page" component={MainPage} />
+            <Route exact path="/main" component={MainPage} />
           </div>
         </Router>
       

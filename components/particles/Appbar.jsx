@@ -16,23 +16,44 @@ class Appbar extends React.Component{
   }
   // Appbar 컴포넌트를 어디에선가 도입하여 이용할 때 다음과 같이 반환합니다.
   render(){
+    if(this.props.usedIn == "index"){
+      return(
+        <div className="Appbar-Grid-Container">
+        
+          <div className="Appbar-Grid-Container__Item">
+            <span className="Appbar-Grid-Container__Item__Text Font-Roboto Font-Weight-Bold">{this.props.brand}</span>
+          </div>
 
-    return(
-      <div className="Appbar-Grid-Container">
+          <div className="Appbar-Grid-Container__Item">
+            <p className="Appbar-Grid-Container__Item__Phrase Font-Style-Italic">{this.props.phrase}</p>
+          </div>
+          <div className="Appbar-Grid-Container__Item">
+            <input id="CONTRY-INPUT" className="Appbar-Grid-Container__Item__Input Font-Roboto" type="text" placeholder="Search..." />
+          </div>
+        </div>
+      )
+    }
+    else if(this.props.usedIn == "main"){
+
+      return(
+        <div className="AppbarMain-Grid-Container">
+          
+          <div className="AppbarMain-Grid-Container__Item">
+            
+          </div>
+
+          <div className="AppbarMain-Grid-Container__Item">
+          
+          </div>
+
+          <div className="AppbarMain-Grid-Container__Item">
+            
+          </div>
+
+        </div>
+      )
       
-        <div className="Appbar-Grid-Container__Item">
-          <span className="Appbar-Grid-Container__Item__Text Font-Roboto Font-Weight-Bold">SMOKY</span>
-        </div>
-
-        <div className="Appbar-Grid-Container__Item">
-          <p className="Appbar-Grid-Container__Item__Phrase Font-Style-Italic">Make Better World by Ourselves</p>
-        </div>
-        <div className="Appbar-Grid-Container__Item">
-          <input id="CONTRY-INPUT" className="Appbar-Grid-Container__Item__Input Font-Roboto" type="text" placeholder="Search..." />
-        </div>
-      </div>
-    )
-
+    }
   }
 }
 

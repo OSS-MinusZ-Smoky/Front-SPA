@@ -44,6 +44,30 @@
     font-size : 20px;
     font-family: 'Roboto', sans-serif;
   }
+
+  .AppbodyMain-Grid-Container{
+
+    width: 100vw;
+    height : calc(100vh - 60px);
+    border : 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    
+  }
+  .AppbodyMain-Grid-Container__Item{
+    border-right: 1px solid black;
+    overflow : scroll;
+  }
+  .AppbodyMain-Grid-Container__Item-Nested{
+    display: grid;
+    border-right: 1px solid black;
+    grid-template-rows: 4fr 6fr;
+  }
+  .AppbodyMain-Grid-Container__Item-Nested__Item{
+    border-bottom: 1px solid black;
+  }
+ 
+
 }
 
 /* 

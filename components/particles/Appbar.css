@@ -45,6 +45,24 @@
     outline: none;
   }
 
+  .AppbarMain-Grid-Container{
+   
+    height : 60px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    border : 1px solid black;
+  
+  }
+  
+    .AppbarMain-Grid-Container__Item{
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+    }
+  
+    
   
 }
 
