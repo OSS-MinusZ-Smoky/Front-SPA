@@ -17,8 +17,8 @@ Installation
     $ npm install
     ...(It will take a while)
 
-    $ npm run dev
-    --> localhost:9000
+    $ node app.js
+    --> localhost:3000
 
 ~~~
 

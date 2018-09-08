@@ -19,12 +19,14 @@ let ChartCanvas;
 let GlobalChart;
 
 window.onload = () => {
+
     GET_CONTRY();
     INIT_MAP();
     INIT_CHART();
 
     let ruru = document.getElementById('ruru');
     ruru.appendChild(new Card(ruru.id));
+    
 }
 
 function GET_CONTRY() {
