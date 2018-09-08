@@ -1,3 +1,20 @@
+
+class Card{
+
+    constructor(ID){
+        setInterval(()=>{
+            let Domstance = document.getElementById(ID);
+            if(Domstance.innerHTML == "0"){
+                Domstance.innerHTML = "1"
+            }
+            else{
+                Domstance.innerHTML = "0"
+            }
+        },1000)
+    }
+
+}
+
 let ChartCanvas;
 let GlobalChart;
 
@@ -5,6 +22,9 @@ window.onload = () => {
     GET_CONTRY();
     INIT_MAP();
     INIT_CHART();
+
+    let ruru = document.getElementById('ruru');
+    ruru.appendChild(new Card(ruru.id));
 }
 
 function GET_CONTRY() {
