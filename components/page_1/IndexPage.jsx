@@ -1,5 +1,5 @@
 import React from 'react';
-import SharedStyle from '../SharedStyles/SharedStyle.css';
+import SharedStyle from '../../public/Styles/SharedStyle.css';
 import Appbar from '../particles/Appbar.jsx';
 import Appbody from '../particles/Appbody.jsx';
 
@@ -45,9 +45,9 @@ class IndexPage extends React.Component{
     if(event.keyCode == 13 && this.state.eventZoom){
       
       let HTTP_REQUEST = new XMLHttpRequest();
-      HTTP_REQUEST.open('GET','/go',true);
+      HTTP_REQUEST.open('GET','/go/?contry='+this.state.contryName,true);
       HTTP_REQUEST.send(null);
-      window.location.href = './go'
+      window.location.href = './go/?contry='+this.state.contryName
       
     }
 

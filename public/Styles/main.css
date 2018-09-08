@@ -1,0 +1,102 @@
+/*
+  forked from gokulkrishh/media-query.css
+  
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    .Grid-Wrapper__Appbar {
+        display: grid;
+        height: 60px;
+        border: 1px solid black;
+        grid-template-columns: 1fr 3fr 1fr;
+      }
+  
+      .Appbar-View-Options {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+  
+      .Grid-Wrapper__Content {
+        display: grid;
+        height: calc(100vh - 60px);
+        border: 1px solid black;
+        grid-template-columns: 1fr 4fr;
+      }
+  
+      .Content-Column-Grid {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 2fr 3fr;
+      }
+  
+      .Column-Grid-Item {
+        padding: 20px;
+        border: 1px solid black;
+      }
+      #google-map {
+        width: 100%;
+        height: 100%;
+      }
+      myChart{
+        width: 100%;
+        height : 100%;
+      }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+ 
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+ 
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  
+  
+}
