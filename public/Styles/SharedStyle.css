@@ -2,11 +2,18 @@
 @import url('http://fonts.googleapis.com/css?family=Roboto');
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   margin: 0;
   padding: 0;
 }
-
+html , body {
+  width : 100%;
+  height : 100%;
+}
+.Logo-Text{
+  font-size : 30px;
+  cursor: pointer;
+}
 .Font-Roboto {
   font-family: 'Roboto', sans-serif;
 }
@@ -24,8 +31,8 @@
 }
 
 .Wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height : 100%;
 }
 
 .Inline-Centered {

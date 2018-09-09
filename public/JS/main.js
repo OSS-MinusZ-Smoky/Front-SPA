@@ -20,17 +20,95 @@ let GlobalChart;
 
 window.onload = () => {
 
-    GET_CONTRY();
+    GET_CONTRY()
     INIT_MAP();
     INIT_CHART();
+    INIT_NAV();
+    
+}
 
-    let ruru = document.getElementById('ruru');
-    ruru.appendChild(new Card(ruru.id));
+function INIT_NAV() {
+    let $LOGO = document.getElementById('LOGO');
+    $LOGO.addEventListener('click',()=>{
+        window.location.href = '../'
+    })
+}
+
+function LIST_DISTRICTS(contry) {
+    console.log(contry);
+    let DISTRICT_REQUEST = new XMLHttpRequest();
+
+    DISTRICT_REQUEST.onreadystatechange = () => {
+
+        if ((DISTRICT_REQUEST.status == 200 || DISTRICT_REQUEST.status == 304) && DISTRICT_REQUEST.readyState == 4) {
+            
+            let Jres = JSON.parse(DISTRICT_REQUEST.responseText);
+            let $DISTRICTS = document.getElementById('DISTRICT');
+            
+            for (const key in Jres) {
+
+                let $DIV = document.createElement('div');
+                $DIV.setAttribute('class','District-Partition');
+
+                let $H3 = document.createElement('h3');
+                $H3.setAttribute('class','District-Partition__Key');
+                $H3.textContent = key;
+                $DIV.appendChild($H3);
+
+                let $ul = document.createElement('ul');
+                
+                $ul.setAttribute('class','District-Partition__List');
+
+                for (let index = 0; index < Jres[key].length; index++) {
+                    let $li = document.createElement('li');
+                    $li.textContent = Jres[key][index];
+                    $ul.appendChild($li);
+                    
+                }
+                
+                $ul.style.maxHeight = '0px';
+                $ul.style.overflow = 'hidden';
+                $ul.style.marginBottom = '20px';
+
+                $H3.addEventListener('mouseover',COLLAPSE_CHECKER);
+                $DIV.addEventListener('mouseleave',COLLAPSE_CHECKER2);
+
+
+                $DIV.appendChild($ul);
+                $DISTRICTS.appendChild($DIV);
+
+            }
+        }
+    }
+
+    DISTRICT_REQUEST.open('GET','./getcontrydistricts');
+    DISTRICT_REQUEST.send(null);
+
+}
+
+function COLLAPSE_CHECKER(event) {
+    let $DO = event.target;
+    let $DO_LIST = $DO.nextSibling;
+
+    $DO_LIST.style.maxHeight = '600px';
+    $DO_LIST.style.transition = 'max-height 0.55s ease-in';
+    
+    
+}
+function COLLAPSE_CHECKER2(event) {
+    let $DO_DIV = event.target;
+    let $DO_H3 = $DO_DIV.firstChild; 
+    let $DO_LIST = $DO_H3.nextSibling;
+
+    $DO_LIST.style.maxHeight = 0;
+    $DO_LIST.style.transition = 'max-height 0.55s ease-out';
+    $DO_LIST.style.overflow = 'hidden';
     
 }
 
 function GET_CONTRY() {
 
+    
     let CONTRY_REQUEST = new XMLHttpRequest();
 
     CONTRY_REQUEST.onreadystatechange = () => {
@@ -38,12 +116,38 @@ function GET_CONTRY() {
         if ((CONTRY_REQUEST.status == 200 || CONTRY_REQUEST.status == 304) && CONTRY_REQUEST.readyState == 4) {
 
             let Jres = JSON.parse(CONTRY_REQUEST.responseText)
-            console.log(Jres.contry);
+            let $CONTRY = document.getElementById('CONTRY');
+            $CONTRY.innerHTML = Jres.contry;
+            LIST_DISTRICTS(Jres.contry);
+            // console.log(Jres.contry);
         }
     }
 
     CONTRY_REQUEST.open('GET', './getcontry');
     CONTRY_REQUEST.send(null);
+    
+}
+
+function RANDOM_BORDER_COLOR() {
+
+    let R = Math.floor((Math.random()*255)+1);
+    let G = Math.floor((Math.random()*255)+1);
+    let B = Math.floor((Math.random()*255)+1);
+
+    let RGB_String = 'rgb('+R+','+G+','+B+')';
+    return RGB_String;
+
+}
+
+function RANDOM_BACKGROUND_COLOR() {
+
+    let R = Math.floor((Math.random()*255)+1);
+    let G = Math.floor((Math.random()*255)+1);
+    let B = Math.floor((Math.random()*255)+1);
+    let A = 0.5;
+
+    let RGBA_String = 'rgba('+R+','+G+','+B+','+A+')';
+    return RGBA_String;
 
 }
 
@@ -51,22 +155,28 @@ function INIT_CHART() {
     ChartCanvas = document.getElementById("myChart");
 
     GlobalChart = new Chart(ChartCanvas, {
+
         type: 'line',
         data: {
 
             labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
 
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 3,
-                backgroundColor: 'rgb(234, 96, 96)',
-                borderColor: 'rgb(234, 96, 96)',
-                tension: 0.5,
-                pointRadius: 0,
-                label: '흡연 인식 기록',
-                fill: false,
-            }]
+            datasets: [
+
+                {
+
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 3,
+                    backgroundColor: RANDOM_BACKGROUND_COLOR(),
+                    borderColor: RANDOM_BORDER_COLOR(),
+                    tension: 0.5,
+                    pointRadius: 0,
+                    label: '흡연 인식 기록',
+                    fill: true,
+
+                }
+
+            ]
         },
         options: {
             responsive: true,

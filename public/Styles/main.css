@@ -10,7 +10,7 @@
     .Grid-Wrapper__Appbar {
         display: grid;
         height: 60px;
-        border: 1px solid black;
+        border-bottom: 1px solid black;
         grid-template-columns: 1fr 3fr 1fr;
       }
   
@@ -21,29 +21,61 @@
   
       .Grid-Wrapper__Content {
         display: grid;
-        height: calc(100vh - 60px);
-        border: 1px solid black;
+        width: 100%;
         grid-template-columns: 1fr 4fr;
+        height : calc(100% - 60px);
       }
-  
+
+      .Content-Column-Side{
+        border-right : 1px solid black;
+        padding-top : 20px;
+        text-align: center;
+        overflow-y: scroll;
+      }
+
+      .District-Partition{
+        /* margin-bottom : 20px; */
+      }
+      .District-Partition__Key{
+        cursor: pointer;
+        margin-bottom : 20px;
+      }
+      .District-Partition__Key:hover{
+        text-decoration: underline;
+      }
+      /* .District-Partition__List li{
+        height : 20px;
+        margin-bottom: 5px;
+      } */
       .Content-Column-Grid {
         display: grid;
-        grid-template-columns: 3fr 1fr;
-        grid-template-rows: 2fr 3fr;
+        grid-template-columns: 75% 25%;
+        grid-template-rows : 40% 60%;
       }
   
       .Column-Grid-Item {
         padding: 20px;
-        border: 1px solid black;
+      }
+      .Column-Grid-Item:nth-child(2n-1){
+        border-right: 1px solid black;
+      }
+      .Column-Grid-Item:nth-child(1){
+        border-bottom: 1px solid black;
+      }
+      .Column-Grid-Item:nth-child(2){
+        border-bottom: 1px solid black;
+      }
+      .Card-Section {
+        display: grid;
+        grid-template-rows: 60px 1fr;
       }
       #google-map {
         width: 100%;
         height: 100%;
       }
-      myChart{
-        width: 100%;
-        height : 100%;
-      }
+      
+     
+      
 }
 
 /* 
