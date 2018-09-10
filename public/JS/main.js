@@ -69,9 +69,8 @@ function LIST_DISTRICTS(contry) {
                     
                 }
                 
-                $H3.addEventListener('mouseover',COLLAPSE_CHECKER);
-                $DIV.addEventListener('mouseleave',COLLAPSE_CHECKER2);
-
+                $H3.addEventListener('click',COLLAPSE_CHECKER);
+    
                 $DIV.appendChild($ul);
                 $DISTRICTS.appendChild($DIV);
 
@@ -88,20 +87,19 @@ function COLLAPSE_CHECKER(event) {
     
     let $DO = event.target;
     let $DO_LIST = $DO.nextSibling;
-    $DO_LIST.classList.remove('closing');
-    $DO_LIST.classList.add('showing');
+    
+    if($DO_LIST.classList.contains('showing')){
+       $DO_LIST.classList.remove('showing');
+       $DO_LIST.classList.add('closing');
+    }
+    else{
+       $DO_LIST.classList.remove('closing');
+       $DO_LIST.classList.add('showing');
+    }
+    
     
 }
-function COLLAPSE_CHECKER2(event) {
 
-    let $DO_DIV = event.target;
-    let $DO_H3 = $DO_DIV.firstChild; 
-    let $DO_LIST = $DO_H3.nextSibling;
-
-    $DO_LIST.classList.remove('showing');
-    $DO_LIST.classList.add('closing');
-    
-}
 
 function GET_CONTRY() {
 
