@@ -65,8 +65,15 @@ class Appbody extends React.Component{
             </div>
           </div>
 
-          <div className="Appbody-Grid-Container__Item">
-
+          <div className="Appbody-Grid-Container__Item Half-Grid">
+            <div className="Usage-Box">
+              
+                <h1 className="Font-Roboto ">Usage</h1>
+                <p className="Font-Inconsolata"><span>1.Click The Search Input.</span></p>
+                <p className="Font-Inconsolata">2.Type Contry Name in English.</p>
+                <p className="Font-Inconsolata">3.Press 'Enter' key </p>
+              
+            </div>
             <div className="Contry-Detail-Grid-Container">
 
               <div className="Contry-Detail-Grid-Container__Header Inline-Centered">

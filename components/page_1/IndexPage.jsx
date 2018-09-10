@@ -97,7 +97,7 @@ class IndexPage extends React.Component{
       return(
 
         <div className="Wrapper">
-          <Appbar brand="SMOKY" phrase="coder" />
+          <Appbar brand="SMOKY" />
           <Appbody
           defaultCenter={this.state.defaultCenter}
           defaultZoom={this.state.defaultZoom}

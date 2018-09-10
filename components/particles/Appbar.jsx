@@ -22,7 +22,6 @@ class Appbar extends React.Component{
           </div>
 
           <div className="Appbar-Grid-Container__Item">
-            <p className="Appbar-Grid-Container__Item__Phrase Font-Style-Italic">{this.props.phrase}</p>
           </div>
           <div className="Appbar-Grid-Container__Item">
             <input id="CONTRY-INPUT" className="Appbar-Grid-Container__Item__Input Font-Roboto" type="text" placeholder="Search..." />
