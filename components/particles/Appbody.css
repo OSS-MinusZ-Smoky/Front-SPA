@@ -11,87 +11,100 @@
   border-radius: 12px;
 }
 
+.Appbody-Grid-Container{
+  min-width: 100vw;
+  width: 100vw;
+  min-height: 100vh;
+  height : auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding : 30px;
+  background-color: rgb(236, 239, 241);
+
+}
+.Appbody-Grid-Container__Item{
+  padding : 0px 20px;
+}
+
+.Half-Grid{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  
+}
+
+.Usage-Box{
+  display: grid;
+  grid-template-rows: 60px 1fr 1fr 1fr;
+  /* border: 1px solid black; */
+}
+.Usage-Box-Item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin-top : 5px;
+  font-size: 1.5vw;
+  font-weight: bold;
+  font-family: 'Roboto' , sans-serif;
+}
+
+
+.Contry-Detail-Grid-Container{
+  width : 100%;
+  height : 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* border : 1px solid black; */
+}
+.Box-Header{
+  font-size: 2.6vw;
+  background-color : white;
+  height: 60px;
+  padding : 10px 40px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 5px 5px 5px #ccc;
+  font-weight: bold;
+}
+.Contry-Detail-Grid-Container__Item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px repeat(5,1fr);
+  
+}
+.Contry-Detail-Category{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size : 1.5vw;
+  font-family: 'Roboto', sans-serif;
+  background-color : rgb(129, 169, 234);
+  padding : 5px;
+  border-radius: 8px;
+  margin : 10px 5px 10px 5px;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+
 @media (min-width: 1281px) {
   
-  .Appbody-Grid-Container{
-
-    width: 100vw;
-    height : calc(100vh - 60px);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding : 30px;
-    background-color: rgb(236, 239, 241);
-
-  }
-  .Appbody-Grid-Container__Item{
-    padding : 0px 20px;
-  }
+  .Contry-Detail-Category{
   
-  .Half-Grid{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    
+    font-size : 1.5vw;
+    font-weight: bold;
+    border-radius: 0px;
+
   }
 
-  .Usage-Box{
-    display: grid;
-    grid-template-rows: repeat(4,1fr);
-    border: 1px solid black;
+  .Box-Header{
+
+    font-weight: bold;
+
   }
-  .Usage-Box h1{
-    font-size: 2.6vw;
-    text-decoration: underline;
-  }
-  .Usage-Box p{
+  .Usage-Box-Item{
+
     font-size: 1.8vw;
-  }
 
-  .Contry-Detail-Grid-Container{
-    width : 100%;
-    height : 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    border : 1px solid black;
   }
-  .Contry-Detail-Grid-Container__Header{
-    font-size: 30px;
-    border-bottom : 1px solid black;
-    font-family: 'Roboto', sans-serif;
-  }
-  .Contry-Detail-Grid-Container__Item{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .Contry-Detail-Grid-Container__Item div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size : 20px;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .AppbodyMain-Grid-Container{
-
-    width: 100vw;
-    height : calc(100vh - 60px);
-    border : 1px solid black;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    
-  }
-  .AppbodyMain-Grid-Container__Item{
-    border-right: 1px solid black;
-    overflow : scroll;
-  }
-  .AppbodyMain-Grid-Container__Item-Nested{
-    display: grid;
-    border-right: 1px solid black;
-    grid-template-rows: 4fr 6fr;
-  }
-  .AppbodyMain-Grid-Container__Item-Nested__Item{
-    border-bottom: 1px solid black;
-  }
- 
 
 }
 
@@ -102,8 +115,25 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   
- 
+  .Contry-Detail-Category{
+  
+    font-size : 1.4vw;
+    font-weight: bold;
+    border-radius: 0px;
 
+  }
+
+  .Box-Header{
+
+    font-weight: bold;
+
+  }
+  .Usage-Box-Item{
+
+    font-size: 1.8vw;
+
+  }
+ 
 }
 
 /* 
@@ -113,8 +143,54 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   
+  .Appbody-Grid-Container{
 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .Appbody-Grid-Container__Item:nth-child(2){
+
+    padding : 0px 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+  }
+
+  .Half-Grid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+
+  }
+
+  .Contry-Detail-Category{
   
+    font-size : 1.8vw;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+
+    font-weight: bold;
+
+  }
+  .Usage-Box-Item{
+
+    font-size: 2.6vw;
+
+  }
+  .Usage-Box-Item:nth-child(4){
+
+    margin-bottom: 10px;
+
+  }
+
 }
 
 /* 
@@ -124,6 +200,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
+ 
   
   
 }
@@ -135,7 +212,54 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   
- 
+  .Appbody-Grid-Container{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+    padding : 0;
+    margin-top : 20px;
+
+  }
+
+  .Appbody-Grid-Container__Item:nth-child(2){
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+  }
+
+  .Half-Grid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+
+  }
+
+  .Contry-Detail-Category{
+  
+    font-size : 2.0vw;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .Usage-Box-Item{
+
+    font-size: 2.6vw;
+
+  }
+  .Usage-Box-Item:nth-child(4){
+
+    margin-bottom: 10px;
+
+  }
   
 }
 
@@ -146,6 +270,66 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   
+
+  .Appbody-Grid-Container{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 600px;
+    padding : 0;
+    margin-top : 5px;
+  }
+
+  .Appbody-Grid-Container__Item{
+    padding : 5px;
+  }
+  .Appbody-Grid-Container__Item:nth-child(2){
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+  }
+
+  .Half-Grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 1fr;
+    grid-column-gap: 5px;
+
+  }
+
+  .Contry-Detail-Category{
+  
+    font-size : 15px;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+    
+    font-size: 20px;
+    height : 40px;
+    font-weight: bold;
+
+  }
+
+  .Usage-Box{
+    display: grid;
+    grid-template-rows: 40px 1fr 1fr 1fr;
+    /* border: 1px solid black; */
+  }
+  .Usage-Box-Item{
+
+    font-size: 20px;
+
+  }
+  .Usage-Box-Item:nth-child(4){
+
+    margin-bottom: 5px;
+
+  }
+
   
   
 }

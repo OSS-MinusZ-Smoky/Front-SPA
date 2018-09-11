@@ -66,43 +66,51 @@ class Appbody extends React.Component{
           </div>
 
           <div className="Appbody-Grid-Container__Item Half-Grid">
-            <div className="Usage-Box">
-              
-                <h1 className="Font-Roboto ">Usage</h1>
-                <p className="Font-Inconsolata"><span>1.Click The Search Input.</span></p>
-                <p className="Font-Inconsolata">2.Type Contry Name in English.</p>
-                <p className="Font-Inconsolata">3.Press 'Enter' key </p>
-              
-            </div>
-            <div className="Contry-Detail-Grid-Container">
+        
+            <div className="Half-Grid-Item Contry-Detail-Grid-Container">
 
-              <div className="Contry-Detail-Grid-Container__Header Inline-Centered">
+              <div className="Box-Header Inline-Centered">
                 <span>{this.props.contryName}</span>
               </div>
 
               <div className="Contry-Detail-Grid-Container__Item">
-                <div>Devices Installed</div>
-                <div>{this.props.deviceInstalled}</div>
+                <div className="Contry-Detail-Category"><span>Devices Installed</span></div>
+                <div className="Contry-Detail-Category"><span>{this.props.deviceInstalled}</span></div>
               </div>
 
               <div className="Contry-Detail-Grid-Container__Item">
-                <div>Smoking Severity</div>
-                <div>{this.props.smokingSeverity}</div>
+                <div className="Contry-Detail-Category"><span>Smoking Severity</span></div>
+                <div className="Contry-Detail-Category"><span>{this.props.smokingSeverity}</span></div>
               </div>
 
               <div className="Contry-Detail-Grid-Container__Item">
-                <div>Good State</div>
-                <div>{this.props.goodState}</div>
+                <div className="Contry-Detail-Category"><span>Good State</span></div>
+                <div className="Contry-Detail-Category"><span>{this.props.goodState}</span></div>
               </div>
 
               <div className="Contry-Detail-Grid-Container__Item">
-                <div>Bad State</div>
-                <div>{this.props.badState}</div>
+                <div className="Contry-Detail-Category"><span>Bad State</span></div>
+                <div className="Contry-Detail-Category"><span>{this.props.badState}</span></div>
               </div>
 
               <div className="Contry-Detail-Grid-Container__Item">
-                <div>Disconnected</div>
-                <div>{this.props.disconnectedState}</div>
+                <div className="Contry-Detail-Category"><span>Disconnected</span></div>
+                <div className="Contry-Detail-Category"><span>{this.props.disconnectedState}</span></div>
+              </div>
+            </div>
+
+            <div className="Half-Grid-Item Usage-Box">
+              <div className="Box-Header Inline-Centered">
+                <span>Usage</span>  
+              </div>
+              <div className="Usage-Box-Item">
+                <p><span>Click The Search Input.</span></p>
+              </div>
+              <div className="Usage-Box-Item">
+                <p>Type Contry Name in English.</p>
+              </div>
+              <div className="Usage-Box-Item">
+                <p>Press 'Enter' key </p>
               </div>
             </div>
 
