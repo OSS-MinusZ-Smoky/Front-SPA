@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../Styles/SharedStyle.css">
   <link rel="stylesheet" type="text/css" href="../Styles/main.css">
-
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcAQgq7DgPXctWtzdbEcpZJU28iEAE8_A" async defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
   <script src="../JS/googlemap.js" type="text/javascript"></script>
@@ -22,11 +22,17 @@
 
     <div class="Grid-Wrapper__Appbar">
 
-      <div class="Appbar-Item Inline-Centered">
+      <div class="Appbar-Item Appbar-Item-Bar Inline-Centered">
+        <div>
+            <span id="BAR"><i class="fas fa-bars"></i>
+        </div>
         <span id="LOGO" class="Font-Roboto Font-Weight-Bold Logo-Text">SMOKY</span>
+        <div>
+        </div>
+        </span>
       </div>
 
-      <div class="Appbar-View-Options">
+      <div class="Appbar-Item Appbar-View-Options">
         <div class="Inline-Centered">
           <span>V_op1</span>
         </div>
@@ -64,12 +70,21 @@
 
         </div>
 
-        <div class="Column-Grid-Item Card-Section">
-
-          <div class="Card-Section__Query-Row">
-
+        <div class="Column-Grid-Item ">
+          <div class="Card-Query-Row">
+            <div class="Inline-Centered">
+              <input class="Query-Input Font-Roboto" id="SEARCH_ID" class="" type="text" placeholder="Device ID">
+            </div>
+            <div class="Inline-Centered">
+              <select class="Query-Input Font-Roboto" name="" id="SEARCH_STATE">
+                <option value="">Condition : </option>
+                <option value="">Good State Only</option>
+                <option value="">Bad State Only</option>
+                <option value="">Disconnected State Only</option>
+              </select>
+            </div>
           </div>
-          <div class="Card-Section__Cards-Row">
+          <div class="Card-Section">
 
           </div>
 

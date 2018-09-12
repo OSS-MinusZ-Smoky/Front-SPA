@@ -24,7 +24,8 @@ window.onload = () => {
     INIT_MAP();
     INIT_CHART();
     INIT_NAV();
-    
+    INIT_BARBTN();
+
 }
 
 function INIT_NAV() {
@@ -186,4 +187,25 @@ function INIT_CHART() {
         }
     });
 
+}
+
+function INIT_BARBTN() {
+    let BARBTN = document.getElementById('BAR');
+    BARBTN.addEventListener('click',()=>{
+        let SIDEBAR = document.getElementById('DISTRICT');
+
+        if(SIDEBAR.classList.contains('bar-showing')){
+
+            SIDEBAR.classList.remove('bar-showing');
+            SIDEBAR.classList.add('bar-closing');
+        }
+
+        else{
+
+            SIDEBAR.classList.remove('bar-closing');
+            SIDEBAR.classList.add('bar-showing');
+            
+        }
+        
+    })
 }

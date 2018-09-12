@@ -36,6 +36,7 @@ class IndexPage extends React.Component{
     
     let CONTRY_INPUT = document.querySelector('#CONTRY-INPUT');
     CONTRY_INPUT.addEventListener('keyup',this.handleContryInput);
+    CONTRY_INPUT.addEventListener('touchend',this.handleContryInput);
     
   }
 
@@ -52,7 +53,7 @@ class IndexPage extends React.Component{
     }
 
     if(event.target.value.length >= 3 && event.keyCode != 13){
-
+      
       fetch(fetchUrl+event.target.value,myInit).then((response)=>{
         let Jres = response.json();
         return Jres;
