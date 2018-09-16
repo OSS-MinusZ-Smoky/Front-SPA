@@ -73,6 +73,17 @@ npm run bundle
  
 > 메인 페이지를 개발하여 변동 사항을 해보고자 할 경우에는 단순히 페이지만 리프레시 하면 됩니다.
 
+
+# ScreenShots
+
+## Index 
+
+![Index](https://github.com/OSS-MinusZ-Smoky/Front-SPA/blob/master/screenshots/index.PNG?raw=true)
+
+## Main
+
+![Main](https://github.com/OSS-MinusZ-Smoky/Front-SPA/blob/master/screenshots/main.PNG?raw=true)
+
 Smoky. Front-SPA V2.0.0 - Alpha
 ===============================
 
