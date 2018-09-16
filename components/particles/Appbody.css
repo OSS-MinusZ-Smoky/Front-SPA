@@ -72,6 +72,7 @@
   
 }
 .Contry-Detail-Category{
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,6 +83,7 @@
   border-radius: 8px;
   margin : 10px 5px 10px 5px;
   box-shadow: 5px 5px 5px #ccc;
+
 }
 
 
@@ -307,7 +309,7 @@
   }
 
   .Box-Header{
-    
+
     font-size: 20px;
     height : 40px;
     font-weight: bold;
