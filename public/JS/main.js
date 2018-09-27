@@ -190,6 +190,7 @@ function INIT_CHART() {
 }
 
 function INIT_BARBTN() {
+
     let BARBTN = document.getElementById('BAR');
     BARBTN.addEventListener('click',()=>{
         let SIDEBAR = document.getElementById('DISTRICT');
@@ -208,4 +209,5 @@ function INIT_BARBTN() {
         }
         
     })
+    
 }

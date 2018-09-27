@@ -21,22 +21,24 @@ function INIT_MAP() {
 
   }
 
-// function markerPush(){
+function markerPush(){
 	
-//     let google_map_marker = new google.maps.Marker({
-// 		position : LatLng,
-// 		draggable : false,
-// 		animation: google.maps.Animation.DROP,
-// 		map: GoogleMap
-// 	});
+    let google_map_marker = new google.maps.Marker({
 
-// 	google_map_marker.setAnimation(google.maps.Animation.BOUNCE);
-// 	google_map_marker.setMap(GoogleMap);
-	
-// }
+      position : LatLng,
+      draggable : false,
+      animation: google.maps.Animation.DROP,
+      map: GoogleMap
+      
+	  });
 
-// function markerPop() {
+	google_map_marker.setAnimation(google.maps.Animation.BOUNCE);
+	google_map_marker.setMap(GoogleMap);
+	
+}
+
+function markerPop() {
 	
 	
 
-// }
+}

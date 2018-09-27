@@ -32,12 +32,9 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "google-map-react": "^1.0.6",
-    "google-maps-react": "^2.0.2",
     "node-sass": "^4.9.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-google-maps": "^9.4.5",
     "react-js-google-maps": "^1.5.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
