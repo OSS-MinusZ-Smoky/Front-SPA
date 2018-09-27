@@ -4,14 +4,10 @@ Smoky. Front-SPA V1.0.0 - Alpha
 License
 -------
 
-babel - MIT
-webpack - MIT
-react - MIT
-react-js-google-maps - ISC
-node-sass - MIT
-express - MIT
-nodejs - MIT
-typeface-roboto - MIT
+MIT - babel,webpack,react,node-sass,express,nodejs,typeface-roboto
+
+ISC - react-js-google-maps
+
 
 Description
 -----------
