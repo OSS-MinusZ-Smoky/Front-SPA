@@ -176,15 +176,18 @@ class Appbody extends React.Component{
             <div id="SWITCH_DIV" style={{ width: '100%', height: '100%'}}>
             {this.state.isChartShowing ?
             ( 
-              <div style={{ width: '100%', height: '100%'}}>
-                <CanvasJSChart  options = {options} 
-                  onRef={ref => this.chart = ref}
-                />
-              </div>
+              <Map 
+              id="GOOGLE-MAP"
+              apiKey="AIzaSyDcAQgq7DgPXctWtzdbEcpZJU28iEAE8_A"
+              mapOptions={
+                this.handleMapOps()
+              }
+              style={{ width: '100%', height: '100%',display:'none'}}
+              onLoad={this.onMapLoad}
+              />
             )
             :
             (
-              
               <Map 
               id="GOOGLE-MAP"
               apiKey="AIzaSyDcAQgq7DgPXctWtzdbEcpZJU28iEAE8_A"
@@ -194,7 +197,22 @@ class Appbody extends React.Component{
               style={{ width: '100%', height: '100%'}}
               onLoad={this.onMapLoad}
               />
+            )
+            }
 
+
+            {this.state.isChartShowing ?
+            ( 
+              <div style={{ width: '100%', height: '100%'}}>
+                <CanvasJSChart  options = {options} 
+                  onRef={ref => this.chart = ref}
+                />
+              </div>
+            )
+            :
+            (
+              
+              <div></div>
             )
             }
 			{/* You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods */}
