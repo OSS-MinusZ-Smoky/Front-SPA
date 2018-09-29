@@ -4,6 +4,7 @@ import Appbar from '../particles/Appbar.jsx';
 import Appbody from '../particles/Appbody.jsx';
 
 class IndexPage extends React.Component{
+
   constructor(){
     super();
     this.state = {
@@ -21,6 +22,7 @@ class IndexPage extends React.Component{
       eventCenter : null,
       markerPos : null,
       isSearched : false
+
     }
     this.handleContryInput = this.handleContryInput.bind(this);
   }
@@ -44,6 +46,8 @@ class IndexPage extends React.Component{
         goodState : "None",
         badState : "None",
         disconnectedState : "None",
+        defaultZoom : 8,
+        defaultCenter : {lat : 37.541 , lng : 126.986},
         eventZoom : null,
         eventCenter : null,
         markerPos : null,

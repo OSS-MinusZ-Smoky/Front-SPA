@@ -2,10 +2,15 @@ import React from 'react';
 import Map from 'react-js-google-maps';
 import './Appbody.css';
 import CardBox from './CardBox.jsx';
-
+import Mycard from "./MyCard.jsx"
 let CanvasJSReact = require('../canvasjs.react.js');
 let CanvasJS = CanvasJSReact.CanvasJS;
 let CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
+const canvasContainerStyle = {
+  width : "100%",
+  height : "100%"
+}
 
 const Get_Marker_Content = (props) =>{
 
@@ -14,15 +19,22 @@ const Get_Marker_Content = (props) =>{
   return Content_String;
    
 }
+
+  let dps = []
+  let xLength = 0;
+  let xVal = 0;
   
 class Appbody extends React.Component{
 
   constructor(props){
 
     super(props);
+
     this.onMapLoad = this.onMapLoad.bind(this);
     this.handleMapOps = this.handleMapOps.bind(this);
-    // this.onMarkerCardClick = this.onMarkerCardClick.bind(this);
+    this.onMarkerClick = this.onMarkerClick.bind(this);
+    this.onCardClick = this.onCardClick.bind(this);
+
     this.state = {
       isChartShowing : false
     }
@@ -30,11 +42,10 @@ class Appbody extends React.Component{
   }
 
   onMapLoad(){
-
-    let googlemap =  window.gmaps['GOOGLE-MAP'];
-
+    let googlemap = window.gmaps['GOOGLE-MAP'];
+    
     if(this.props.eventCenter == null){
-
+      
       let pos = new window.google.maps.LatLng(this.props.defaultCenter);
       let marker = new window.google.maps.Marker({
         position: pos,
@@ -78,11 +89,6 @@ class Appbody extends React.Component{
 
         google_map_marker.addListener('click',()=>{
 
-          // let ID = google_map_marker.id;
-          // let NAME = google_map_marker.name;
-
-          // MAKE_CARD(ID,NAME)
-
           infoWindow.open(googlemap.gmap,google_map_marker)
 
         })
@@ -99,6 +105,7 @@ class Appbody extends React.Component{
   }
   
   handleMapOps(){
+    
     let answer = {};
     if(this.props.eventCenter == null){
       answer = {
@@ -114,15 +121,35 @@ class Appbody extends React.Component{
     }  
     return answer;
   }
-
-  onMarkerClick(ID){
+  
+  onMarkerClick(flipflop){
+    console.log("flipflop : " + flipflop)
     this.setState({
-      isChartShowing : true
+      isChartShowing : flipflop
+    },()=>{
+      this.onMapLoad()
     })
+    
   }
 
-  render(){
+  onCardClick(statusVal,ID){
+    console.log("값 : " + statusVal + "ID : " + ID)
+    console.log(typeof(statusVal));
 
+    if(xLength <= 15){
+      let dataPoint = { x: ++xVal , y:parseInt(statusVal)}
+      dps.push(dataPoint)
+      xLength++;
+    }
+    else{
+      xLength = xLength - 1;
+      dps.shift();
+    }
+
+    this.chart.render()
+  }
+  render(){
+    console.log(this.state.isChartShowing)
       const options = {
         animationEnabled: true,
         exportEnabled: true,
@@ -131,25 +158,13 @@ class Appbody extends React.Component{
           text: "Live Smoking Chart"
         },
         data: [{
+
           type: "line", //change type to bar, line, area, pie, etc
           //indexLabel: "{y}", //Shows y value on all Data Points
           indexLabelFontColor: "#5A5757",
           indexLabelPlacement: "outside",
-          dataPoints: [
-            { x: 10, y: 71 },
-            { x: 20, y: 55 },
-            { x: 30, y: 50 },
-            { x: 40, y: 65 },
-            { x: 50, y: 71 },
-            { x: 60, y: 68 },
-            { x: 70, y: 38 },
-            { x: 80, y: 92, indexLabel: "Highest" },
-            { x: 90, y: 54 },
-            { x: 100, y: 60 },
-            { x: 110, y: 21 },
-            { x: 120, y: 49 },
-            { x: 130, y: 36 }
-          ]
+          dataPoints: dps
+
         }]
       }
 
@@ -161,12 +176,15 @@ class Appbody extends React.Component{
             <div id="SWITCH_DIV" style={{ width: '100%', height: '100%'}}>
             {this.state.isChartShowing ?
             ( 
-              <CanvasJSChart options = {options} 
-              // onRef={ref => this.chart = ref}
-              />
+              <div style={{ width: '100%', height: '100%'}}>
+                <CanvasJSChart  options = {options} 
+                  onRef={ref => this.chart = ref}
+                />
+              </div>
             )
-            : 
+            :
             (
+              
               <Map 
               id="GOOGLE-MAP"
               apiKey="AIzaSyDcAQgq7DgPXctWtzdbEcpZJU28iEAE8_A"
@@ -176,6 +194,7 @@ class Appbody extends React.Component{
               style={{ width: '100%', height: '100%'}}
               onLoad={this.onMapLoad}
               />
+
             )
             }
 			{/* You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods */}
@@ -195,7 +214,7 @@ class Appbody extends React.Component{
               />
             {this.props.isSearched ?
               (
-                <CardBox MarkerCardClick={this.onMarkerClick} Markers={this.props.markerObj} />
+                <CardBox ChartDrawer={this.onCardClick} markerCardClick={this.onMarkerClick} markers={this.props.markerObj} />
               )
               :
               (

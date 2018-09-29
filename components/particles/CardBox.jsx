@@ -17,10 +17,16 @@ class CardBox extends React.Component{
         </div>
 
         <div id="CARD_LISTS">
-          {this.props.Markers.map((element)=>{
+
+          {this.props.markers.map((element)=>{
+
             return(
-              <MyCard key={element.busid} id={element.busid} name={element.busname} />
+
+              <MyCard key={element.busid} id={element.busid} name={element.busname} doh={element.Doh} city={element.city} clickHandler={this.props.markerCardClick}
+              ChartDrawer={this.props.ChartDrawer} />
+
             )
+
           })}    
           
         </div>

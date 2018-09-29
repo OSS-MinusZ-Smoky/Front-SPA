@@ -6,7 +6,8 @@
   border : 2px solid rgb(236, 239, 241);
   -webkit-box-shadow: 0 10px 6px -6px #777;
 	   -moz-box-shadow: 0 10px 6px -6px #777;
-	        box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+  cursor: pointer;
 }
 
 .Card-Box:hover {
@@ -31,6 +32,12 @@
   font-family: "Noto Sans CJK KR"
 }
 
+.Status-Good{
+  background-color: palegreen;
+}
+.Status-Bad{
+  background-color: palevioletred;
+}
 /*
   forked from gokulkrishh/media-query.css
   
