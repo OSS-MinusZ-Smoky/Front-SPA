@@ -1,12 +1,11 @@
 import React from 'react';
 import Map from 'react-js-google-maps';
 import './Appbody.css';
+import CardBox from './CardBox.jsx';
 
 let CanvasJSReact = require('../canvasjs.react.js');
 let CanvasJS = CanvasJSReact.CanvasJS;
 let CanvasJSChart = CanvasJSReact.CanvasJSChart;
-
-let dataPoints =[];
 
 const Get_Marker_Content = (props) =>{
 
@@ -17,14 +16,17 @@ const Get_Marker_Content = (props) =>{
 }
   
 class Appbody extends React.Component{
+
   constructor(props){
 
     super(props);
     this.onMapLoad = this.onMapLoad.bind(this);
     this.handleMapOps = this.handleMapOps.bind(this);
+    // this.onMarkerCardClick = this.onMarkerCardClick.bind(this);
     this.state = {
-      Markers : null
+      isChartShowing : false
     }
+
   }
 
   onMapLoad(){
@@ -76,10 +78,10 @@ class Appbody extends React.Component{
 
         google_map_marker.addListener('click',()=>{
 
-          let ID = google_map_marker.id;
-          let NAME = google_map_marker.name;
+          // let ID = google_map_marker.id;
+          // let NAME = google_map_marker.name;
 
-          MAKE_CARD(ID , NAME);
+          // MAKE_CARD(ID,NAME)
 
           infoWindow.open(googlemap.gmap,google_map_marker)
 
@@ -90,11 +92,11 @@ class Appbody extends React.Component{
         google_map_marker.setMap(googlemap.gmap);
 
         
-
+        
       })
 
     }
-}
+  }
   
   handleMapOps(){
     let answer = {};
@@ -111,6 +113,12 @@ class Appbody extends React.Component{
       }
     }  
     return answer;
+  }
+
+  onMarkerClick(ID){
+    this.setState({
+      isChartShowing : true
+    })
   }
 
   render(){
@@ -151,7 +159,7 @@ class Appbody extends React.Component{
           <div className="Appbody-Grid-Container__Item">
 
             <div id="SWITCH_DIV" style={{ width: '100%', height: '100%'}}>
-            {this.props.isResponsed ?
+            {this.state.isChartShowing ?
             ( 
               <CanvasJSChart options = {options} 
               // onRef={ref => this.chart = ref}
@@ -176,79 +184,65 @@ class Appbody extends React.Component{
           </div>
 
           <div className="Appbody-Grid-Container__Item Half-Grid">
-        
-            <div className="Half-Grid-Item Contry-Detail-Grid-Container">
-
-              <div className="Box-Header Inline-Centered">
-                <span>{this.props.cityName}</span>
-              </div>
-
-              <div className="Contry-Detail-Grid-Container__Item">
-                <div className="Contry-Detail-Category"><span>Devices Installed</span></div>
-                <div className="Contry-Detail-Category"><span>{this.props.deviceInstalled}</span></div>
-              </div>
-
-              <div className="Contry-Detail-Grid-Container__Item">
-                <div className="Contry-Detail-Category"><span>Smoking Severity</span></div>
-                <div className="Contry-Detail-Category"><span>{this.props.smokingSeverity}</span></div>
-              </div>
-
-              <div className="Contry-Detail-Grid-Container__Item">
-                <div className="Contry-Detail-Category"><span>Good State</span></div>
-                <div className="Contry-Detail-Category"><span>{this.props.goodState}</span></div>
-              </div>
-
-              <div className="Contry-Detail-Grid-Container__Item">
-                <div className="Contry-Detail-Category"><span>Bad State</span></div>
-                <div className="Contry-Detail-Category"><span>{this.props.badState}</span></div>
-              </div>
-
-              <div className="Contry-Detail-Grid-Container__Item">
-                <div className="Contry-Detail-Category"><span>Disconnected</span></div>
-                <div className="Contry-Detail-Category"><span>{this.props.disconnectedState}</span></div>
-              </div>
-            </div>
-
-            <div id="CARD_LISTS" className="Half-Grid-Item Usage-Box">
-              
-            </div>
-
+            
+              <Details 
+                cityName={this.props.cityName}
+                deviceInstalled={this.props.deviceInstalled}
+                smokingSeverity={this.props.smokingSeverity}
+                goodState={this.props.goodState}
+                badState={this.props.badState}
+                disconnectedState={this.props.disconnectedState}
+              />
+            {this.props.isSearched ?
+              (
+                <CardBox MarkerCardClick={this.onMarkerClick} Markers={this.props.markerObj} />
+              )
+              :
+              (
+                <div></div>
+              )
+            }
           </div>
         </div>
       )
   }
 }
 
-function MAKE_CARD(ID,NAME) {
-  
-  let $CARD_BOX = document.body.querySelector('#CARD_LISTS');
- 
-  let $CONTAINER = document.createElement('div');
-  $CONTAINER.classList.add("Card-Box");
+const Details = (props) => {
+  return(
+    <div className="Half-Grid-Item Contry-Detail-Grid-Container">
 
-  let $ID_DIV = document.createElement('div');
-  $ID_DIV.classList.add('Card-Row');
+      <div className="Box-Header Inline-Centered">
+        <span>{props.cityName}</span>
+      </div>
 
-  let $ID_TEXT = document.createElement('span');
-  $ID_TEXT.classList.add('Card-Text');
+      <div className="Contry-Detail-Grid-Container__Item">
+        <div className="Contry-Detail-Category"><span>Devices Installed</span></div>
+        <div className="Contry-Detail-Category"><span>{props.deviceInstalled}</span></div>
+      </div>
 
-  let $NAME_DIV = document.createElement('div');
-  $NAME_DIV.classList.add('Card-Row');
+      <div className="Contry-Detail-Grid-Container__Item">
+        <div className="Contry-Detail-Category"><span>Smoking Severity</span></div>
+        <div className="Contry-Detail-Category"><span>{props.smokingSeverity}</span></div>
+      </div>
 
-  let $NAME_TEXT = document.createElement('span');
-  $NAME_TEXT.classList.add('Card-Text');
+      <div className="Contry-Detail-Grid-Container__Item">
+        <div className="Contry-Detail-Category"><span>Good State</span></div>
+        <div className="Contry-Detail-Category"><span>{props.goodState}</span></div>
+      </div>
 
-  $ID_TEXT.textContent = ID;
-  $NAME_TEXT.textContent = NAME;
+      <div className="Contry-Detail-Grid-Container__Item">
+        <div className="Contry-Detail-Category"><span>Bad State</span></div>
+        <div className="Contry-Detail-Category"><span>{props.badState}</span></div>
+      </div>
 
-  $ID_DIV.appendChild($ID_TEXT);
-  $NAME_DIV.appendChild($NAME_TEXT);
+      <div className="Contry-Detail-Grid-Container__Item">
+        <div className="Contry-Detail-Category"><span>Disconnected</span></div>
+        <div className="Contry-Detail-Category"><span>{props.disconnectedState}</span></div>
+      </div>
 
-  $CONTAINER.appendChild($ID_DIV);
-  $CONTAINER.appendChild($NAME_DIV);
-
-  $CARD_BOX.appendChild($CONTAINER);  
-
+    </div>
+  )
 }
 
 export default Appbody;

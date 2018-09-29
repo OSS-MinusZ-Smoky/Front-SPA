@@ -19,9 +19,8 @@ class IndexPage extends React.Component{
       defaultCenter : {lat : 37.541 , lng : 126.986},
       eventZoom : null,
       eventCenter : null,
-      isResponsed : false,
       markerPos : null,
-
+      isSearched : false
     }
     this.handleContryInput = this.handleContryInput.bind(this);
   }
@@ -47,8 +46,8 @@ class IndexPage extends React.Component{
         disconnectedState : "None",
         eventZoom : null,
         eventCenter : null,
-        isResponsed : false,
         markerPos : null,
+        isSearched : false
       })
     }
     else if(event.keyCode == 13){
@@ -95,8 +94,8 @@ class IndexPage extends React.Component{
           defaultCenter : null,
           eventZoom : 13,
           eventCenter : {lat : resLat , lng : resLng},
-          isResponsed : false,
-          markerPos : Jres.result1
+          markerPos : Jres.result1,
+          isSearched : true
         })
       }
     }) 
@@ -121,8 +120,8 @@ class IndexPage extends React.Component{
           goodState={this.state.goodState}
           badState={this.state.badState}
           disconnectedState={this.state.disconnectedState}
-          isResponsed={this.state.isResponsed}
           markerObj={this.state.markerPos}
+          isSearched={this.state.isSearched}
           />
         </div>
         

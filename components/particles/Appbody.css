@@ -32,14 +32,6 @@
   
 }
 
-.Usage-Box {
-
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(2,1fr);
-  
-}
-
 .Contry-Detail-Grid-Container{
   width : 100%;
   height : 100%;
@@ -94,28 +86,7 @@
 
   }
 
-  .Card-Box{
-
-    height: 60px;
-    width : 100%;
-    background-color: white;
-    border : 1px solid #ccc;
-    box-shadow: 5px 5px 38px black;
-  }
-
-  .Card-Row{
-    height : 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  }
-  .Card-Row:nth-child(1){
-    border-bottom: 1px solid black;
-  }
-  .Card-Text{
-    font-size: 15px;
-  }
+  
 }
 
 /* 
