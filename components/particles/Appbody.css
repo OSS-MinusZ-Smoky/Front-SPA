@@ -26,28 +26,19 @@
   padding : 0px 20px;
 }
 
-.Half-Grid{
+.Half-Grid {
   display: grid;
   grid-template-rows: 1fr 1fr;
   
 }
 
-.Usage-Box{
-  display: grid;
-  grid-template-rows: 60px 1fr 1fr 1fr;
-  /* border: 1px solid black; */
-}
-.Usage-Box-Item{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  margin-top : 5px;
-  font-size: 1.5vw;
-  font-weight: bold;
-  font-family: 'Roboto' , sans-serif;
-}
+.Usage-Box {
 
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2,1fr);
+  
+}
 
 .Contry-Detail-Grid-Container{
   width : 100%;
@@ -102,12 +93,29 @@
     font-weight: bold;
 
   }
-  .Usage-Box-Item{
 
-    font-size: 1.8vw;
+  .Card-Box{
 
+    height: 60px;
+    width : 100%;
+    background-color: white;
+    border : 1px solid #ccc;
+    box-shadow: 5px 5px 38px black;
   }
 
+  .Card-Row{
+    height : 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .Card-Row:nth-child(1){
+    border-bottom: 1px solid black;
+  }
+  .Card-Text{
+    font-size: 15px;
+  }
 }
 
 /* 
@@ -130,11 +138,7 @@
     font-weight: bold;
 
   }
-  .Usage-Box-Item{
 
-    font-size: 1.8vw;
-
-  }
  
 }
 
@@ -182,16 +186,8 @@
     font-weight: bold;
 
   }
-  .Usage-Box-Item{
 
-    font-size: 2.6vw;
 
-  }
-  .Usage-Box-Item:nth-child(4){
-
-    margin-bottom: 10px;
-
-  }
 
 }
 
@@ -252,16 +248,8 @@
     font-size: 30px;
     font-weight: bold;
   }
-  .Usage-Box-Item{
 
-    font-size: 2.6vw;
 
-  }
-  .Usage-Box-Item:nth-child(4){
-
-    margin-bottom: 10px;
-
-  }
   
 }
 
@@ -316,22 +304,5 @@
 
   }
 
-  .Usage-Box{
-    display: grid;
-    grid-template-rows: 40px 1fr 1fr 1fr;
-    /* border: 1px solid black; */
-  }
-  .Usage-Box-Item{
-
-    font-size: 20px;
-
-  }
-  .Usage-Box-Item:nth-child(4){
-
-    margin-bottom: 5px;
-
-  }
-
-  
   
 }
