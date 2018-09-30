@@ -1,0 +1,284 @@
+/*
+  forked from gokulkrishh/media-query.css
+  
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+.Step-Highlight{
+  background-color: rgba(255, 255, 255,0.90);
+  color : rgb(255, 112, 67);
+  border-radius: 12px;
+}
+
+.Appbody-Grid-Container{
+  min-width: 100vw;
+  width: 100vw;
+  min-height: 100vh;
+  height : auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding : 30px;
+  background-color: rgb(236, 239, 241);
+
+}
+.Appbody-Grid-Container__Item{
+  padding : 0px 20px;
+}
+.Appbody-Grid-Container__Item:nth-child(1){
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.Half-Grid {
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  
+}
+
+.Contry-Detail-Grid-Container{
+  width : 100%;
+  height : 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* border : 1px solid black; */
+}
+.Box-Header{
+  font-size: 2.6vw;
+  background-color : white;
+  height: 60px;
+  padding : 10px 40px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 5px 5px 5px #ccc;
+  font-weight: bold;
+}
+.Contry-Detail-Grid-Container__Item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px repeat(5,1fr);
+  
+}
+.Contry-Detail-Category{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size : 1.5vw;
+  font-family: 'Roboto', sans-serif;
+  background-color : rgb(129, 169, 234);
+  padding : 5px;
+  border-radius: 8px;
+  margin : 10px 5px 10px 5px;
+  box-shadow: 5px 5px 5px #ccc;
+
+}
+
+
+@media (min-width: 1281px) {
+  
+  .Contry-Detail-Category{
+  
+    font-size : 1.5vw;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+
+    font-weight: bold;
+
+  }
+
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .Contry-Detail-Category{
+  
+    font-size : 1.4vw;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+
+    font-weight: bold;
+
+  }
+
+ 
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .Appbody-Grid-Container{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .Appbody-Grid-Container__Item:nth-child(2){
+
+    padding : 0px 20px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+  }
+
+  .Half-Grid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+
+  }
+
+  .Contry-Detail-Category{
+  
+    font-size : 1.8vw;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+
+    font-weight: bold;
+
+  }
+
+
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+ 
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .Appbody-Grid-Container{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+    padding : 0;
+    margin-top : 20px;
+
+  }
+
+  .Appbody-Grid-Container__Item:nth-child(2){
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+  }
+
+  .Half-Grid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+
+  }
+
+  .Contry-Detail-Category{
+  
+    font-size : 2.0vw;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+
+  .Appbody-Grid-Container{
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 600px;
+    padding : 0;
+    margin-top : 5px;
+  }
+
+  .Appbody-Grid-Container__Item{
+    padding : 5px;
+  }
+  .Appbody-Grid-Container__Item:nth-child(2){
+    
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+  }
+
+  .Half-Grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 1fr;
+    grid-column-gap: 5px;
+
+  }
+
+  .Contry-Detail-Category{
+  
+    font-size : 15px;
+    font-weight: bold;
+    border-radius: 0px;
+
+  }
+
+  .Box-Header{
+
+    font-size: 20px;
+    height : 40px;
+    font-weight: bold;
+
+  }
+
+  
+}
