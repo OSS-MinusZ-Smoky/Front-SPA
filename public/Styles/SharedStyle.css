@@ -1,0 +1,41 @@
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+html , body {
+  width : 100%;
+  height : 100%;
+  background-color: rgb(250, 250, 250);
+}
+.Font-Roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.Font-NotoSansKr {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.Font-Weight-Bold {
+  font-weight: bold;
+}
+
+.Font-Style-Italic {
+  font-style: italic
+}
+
+.Wrapper {
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  height : 100%;
+}
+
+.Inline-Centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
