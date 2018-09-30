@@ -20,7 +20,7 @@ const Get_Marker_Content = (props) =>{
    
 }
 
-  let dps = []
+  let dps = {}
   let xLength = 0;
   let xVal = 0;
   
@@ -36,7 +36,8 @@ class Appbody extends React.Component{
     this.onCardClick = this.onCardClick.bind(this);
 
     this.state = {
-      isChartShowing : false
+      isChartShowing : false,
+      showingCardId : String
     }
 
   }
@@ -135,15 +136,21 @@ class Appbody extends React.Component{
   onCardClick(statusVal,ID){
     console.log("값 : " + statusVal + "ID : " + ID)
     console.log(typeof(statusVal));
-
+    this.setState({ 
+      showingCardId : ID
+    })
+    if(dps[ID]==null){
+      dps[ID]=[];
+    }
+    console.log(dps[ID]);
     if(xLength <= 15){
-      let dataPoint = { x: ++xVal , y:parseInt(statusVal)}
-      dps.push(dataPoint)
+      let dataPoint = { x: 	Object.keys(dps[ID]).length , y:parseInt(statusVal)}
+      dps[ID].push(dataPoint)
       xLength++;
     }
     else{
       xLength = xLength - 1;
-      dps.shift();
+      dps[ID].shift();
     }
 
     this.chart.render()
@@ -163,7 +170,7 @@ class Appbody extends React.Component{
           //indexLabel: "{y}", //Shows y value on all Data Points
           indexLabelFontColor: "#5A5757",
           indexLabelPlacement: "outside",
-          dataPoints: dps
+          dataPoints: dps[this.state.showingCardId]
 
         }]
       }
@@ -211,7 +218,6 @@ class Appbody extends React.Component{
             )
             :
             (
-              
               <div></div>
             )
             }
