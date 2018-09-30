@@ -12,7 +12,7 @@
 
 .Card-Box:hover {
 
-  border : 2px solid rgb(129, 169, 234) 
+  border : 2px solid rgb(129, 169, 234);
 
 }
 
@@ -21,11 +21,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
+
 .Card-Row:nth-child(1){
   border-bottom: 1px solid rgb(200,200,200);
 }
+
 .Card-Text{
   font-size: calc(1vw);
   font-weight: bold;
@@ -35,8 +36,17 @@
 .Status-Good{
   background-color: palegreen;
 }
+
 .Status-Bad{
   background-color: palevioletred;
+}
+
+.Chart-On{
+  border : 2px solid rgb(129, 169, 234);
+}
+
+.Chart-Off{
+  border : 2px solid rgb(236, 239, 241);
 }
 /*
   forked from gokulkrishh/media-query.css

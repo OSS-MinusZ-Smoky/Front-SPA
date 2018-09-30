@@ -16,10 +16,8 @@ class IndexPage extends React.Component{
       goodState : "None",
       badState : "None",
       disconnectedState : "None",
-      defaultZoom : 8,
-      defaultCenter : {lat : 37.541 , lng : 126.986},
-      eventZoom : null,
-      eventCenter : null,
+      zoom : 8,
+      center : {lat : 37.541 , lng : 126.986},
       markerPos : null,
       isSearched : false
 
@@ -46,11 +44,9 @@ class IndexPage extends React.Component{
         goodState : "None",
         badState : "None",
         disconnectedState : "None",
-        defaultZoom : 8,
-        defaultCenter : {lat : 37.541 , lng : 126.986},
-        eventZoom : null,
-        eventCenter : null,
-        markerPos : null,
+        zoom : 8,
+        center : {lat : 37.541 , lng : 126.986},
+        markerPos : [],
         isSearched : false
       })
     }
@@ -94,10 +90,8 @@ class IndexPage extends React.Component{
           goodState : resGood,
           badState : resBad,
           disconnectedState : resDiscon,
-          defaultZoom : null,
-          defaultCenter : null,
-          eventZoom : 13,
-          eventCenter : {lat : resLat , lng : resLng},
+          zoom : 13,
+          center : {lat : resLat , lng : resLng},
           markerPos : Jres.result1,
           isSearched : true
         })
@@ -114,10 +108,8 @@ class IndexPage extends React.Component{
         <div className="Wrapper">
           <Appbar brand="SMOKY" />
           <Appbody
-          defaultCenter={this.state.defaultCenter}
-          defaultZoom={this.state.defaultZoom}
-          eventCenter={this.state.eventCenter}
-          eventZoom={this.state.eventZoom}
+          center={this.state.center}
+          zoom={this.state.zoom}
           cityName={this.state.cityName}
           deviceInstalled={this.state.deviceInstalled}
           smokingSeverity={this.state.smokingSeverity}

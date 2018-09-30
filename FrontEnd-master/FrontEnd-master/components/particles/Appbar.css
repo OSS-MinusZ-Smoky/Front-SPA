@@ -155,7 +155,7 @@
     }  
 
     .Appbar-Grid-Container__Item__Input{
-      
+      padding: 0;
       text-align: center;
       font-size: 15px;
 

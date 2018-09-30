@@ -13,7 +13,9 @@ class CardBox extends React.Component{
       <div className="Half-Grid-Item Usage-Box">
 
         <div className="Card_Search_Box">
-          <input id="CARD_SEARCH" type="text" placeholder="Type Marker ID ..."/>
+        <div className="Box-Header Inline-Centered">
+          <span className="Box-Header__Text">장치 시각화</span>
+        </div>
         </div>
 
         <div id="CARD_LISTS">
@@ -23,7 +25,7 @@ class CardBox extends React.Component{
             return(
 
               <MyCard key={element.busid} id={element.busid} name={element.busname} doh={element.Doh} city={element.city} clickHandler={this.props.markerCardClick}
-              ChartDrawer={this.props.ChartDrawer} />
+              ChartDrawer={this.props.ChartDrawer} isChartShowing={this.props.isChartShowing} />
 
             )
 
