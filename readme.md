@@ -82,11 +82,28 @@ npm run bundle
 
 ## Index 
 
-![Index](https://github.com/OSS-MinusZ-Smoky/Front-SPA/blob/master/screenshots/index.PNG?raw=true)
+![IndexD](https://github.com/OSS-MinusZ-Smoky/FrontEnd/blob/master/screenshots/index.PNG?raw=true)
 
-## Main
+## Index(Tablet) 
 
-![Main](https://github.com/OSS-MinusZ-Smoky/Front-SPA/blob/master/screenshots/main.PNG?raw=true)
+![IndexT](https://github.com/OSS-MinusZ-Smoky/FrontEnd/blob/master/screenshots/index_tablet.PNG?raw=true)
+
+## Index(Mobile) 
+
+![IndexM](https://github.com/OSS-MinusZ-Smoky/FrontEnd/blob/master/screenshots/index_mobile.PNG?raw=true)
+
+## Search(Desktop)
+
+![SearchD](https://github.com/OSS-MinusZ-Smoky/FrontEnd/blob/master/screenshots/search_desktop.PNG?raw=true)
+
+## Search(Tablet)
+
+![SearchDT](https://github.com/OSS-MinusZ-Smoky/FrontEnd/blob/master/screenshots/search_tablet.PNG?raw=true)
+
+## Search(Tablet2)
+
+![SearchDT2](https://github.com/OSS-MinusZ-Smoky/FrontEnd/blob/master/screenshots/search_tablet2.PNG?raw=true)
+
 
 Smoky. Front-SPA V2.0.0 - Alpha
 ===============================
@@ -122,4 +139,8 @@ Change History
 >3.또 동적차트 모듈을 도입하여 관심있는 장치를 클릭하면 기존 웹페이지에서 구글맵으로 렌더링 되는 부분이 상태 변경을 통해 차트로 렌더링 됩니다.
 
 
+페이지 이용법
+-----------
 
+>1. 웹 앱바 상단 우측 'Search...' 박스를 클릭하여 도시 정보를 내려받습니다. 입력 예 (안산 , 서울)
+>2. 나타난 카드 컴포넌트의 변화를 살펴볼 수 있으며 카드 컴포넌트를 클릭하면 차트를 통해 데이터 변동을 확인할 수 있습니다.
