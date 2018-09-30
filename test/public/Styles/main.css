@@ -1,0 +1,709 @@
+/*
+  forked from gokulkrishh/media-query.css
+  
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+.Grid-Wrapper__Appbar {
+  display: grid;
+  height: 60px;
+  /* border-bottom: 1px solid black; */
+  grid-template-columns: 1fr 3fr 1fr;
+  background-color: rgb(38, 50, 56);
+
+}
+.Appbar-Item:nth-child(2){
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Appbar-Item-Bar{
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+
+}
+
+.Grid-Wrapper__Content {
+
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 4fr;
+  height: calc(100% - 60px);
+  background-color: rgb(236, 239, 241);
+
+}
+
+.Content-Column-Side {
+  border-right: 1px solid #ccc;
+  padding-top: 20px;
+  text-align: center;
+  overflow-y: auto;
+
+}
+
+.District-Partition__Key {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.District-Partition__List li {
+  margin-bottom: 10px;
+}
+
+.List-Initial-State {
+  max-height: 0px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.showing {
+  max-height: 2000px;
+  transition: max-height 0.55s ease-in;
+}
+
+.closing {
+  max-height: 0px;
+  transition: max-height 0.55s ease-in;
+  overflow: hidden;
+}
+
+.Content-Column-Grid {
+
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 40% 60%;
+
+}
+
+.Column-Grid-Item {
+  padding: 20px;
+}
+
+.Column-Grid-Item:nth-child(2n-1) {
+  border-right: 1px solid #ccc;
+}
+
+.Column-Grid-Item:nth-child(1) {
+  border-bottom: 1px solid #ccc;
+
+}
+
+.Column-Grid-Item:nth-child(2) {
+  border-bottom: 1px solid #ccc;
+}
+
+.Column-Grid-Item:nth-child(3) {
+
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 1fr;
+  overflow: auto;
+}
+.Column-Grid-Item:nth-child(4) {
+
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 1fr;
+
+}
+
+
+.Card-Query-Row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+}
+
+.Query-Input {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border: 2px solid #ccc;
+}
+
+.Query-Input:nth-child(1) {
+  text-align: center;
+}
+
+
+.Query-Input:focus {
+  outline: none;
+}
+
+.Card-Section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#CONTRY {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px black;
+}
+
+.Logo-Text {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  text-shadow: 3px 3px black;
+}
+#BAR{
+  display: none;
+}
+.District-Partition__Key:hover {
+  text-decoration: underline;
+}
+
+.District-Partition__List li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#google-map {
+  width: 100%;
+  height: 100%;
+}
+
+#SEARCH_STATE{
+  padding-left: 20px;
+}
+
+.View-Option-Grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 70px;
+}
+.View-Option-Grid__Item{
+  width : 100%;
+  height : 100%;
+}.View-Option-Grid__Item__Img{
+  cursor: pointer;
+  width : 100%;
+  height : 100%;
+}
+
+#RED-CIRCLE{
+  border-radius: 50%;
+  width : 50px;
+  height : 50px;
+  position: fixed;
+  bottom : 40px;
+  right : 30px;
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#RED-CIRCLE span{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (min-width: 1281px) {
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  .Grid-Wrapper__Appbar {
+    grid-template-columns: repeat(8,1fr);
+  }
+  .Appbar-Item:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+  }
+  .Appbar-Item:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+  .Appbar-Item:nth-child(3){
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+  .Grid-Wrapper__Content {
+
+    z-index: 1;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 1fr;
+    height: calc(100% - 60px);
+    background-color: rgb(236, 239, 241);
+
+  }
+  .Content-Column-Side {
+
+    width : 0;
+    z-index: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    border : none;
+    background-color: rgba(255,255,255,0.6);
+    
+  }
+
+  .bar-showing{
+    width : 100%;
+    transition: width 500ms;
+  }
+  .bar-closing{
+    width: 0;
+  }
+
+  .Content-Column-Grid {
+
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 40% 60%;
+
+  }
+
+  .Column-Grid-Item:nth-child(2n-1) {
+    border-right: 1px solid black;
+    grid-column-start : 1;
+    grid-column-end: 6;
+  }
+  .Column-Grid-Item:nth-child(2n){
+    grid-column-start : 6;
+    grid-column-end: 9;
+  }
+
+  .Query-Input {
+    font-size: 18px;
+    padding-left: 20px;
+    border: 2px solid #ccc;
+  } 
+
+  #SEARCH_ID {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .Card-Section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #CONTRY {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px black;
+  }
+
+  .Logo-Text {
+    font-size: 25px;
+  }
+
+  #BAR{
+    display: initial;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .Grid-Wrapper__Appbar {
+    grid-template-columns: repeat(8,1fr);
+  }
+  .Appbar-Item:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+  }
+  .Appbar-Item:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+  .Appbar-Item:nth-child(3){
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+  .Grid-Wrapper__Content {
+
+    z-index: 1;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 1fr;
+    height: calc(100% - 60px);
+    background-color: rgb(236, 239, 241);
+
+  }
+  .Content-Column-Side {
+
+    width : 0;
+    z-index: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    border : none;
+    background-color: rgba(255,255,255,0.6);
+    
+  }
+
+  .bar-showing{
+    width : 100%;
+    transition: width 500ms;
+  }
+  .bar-closing{
+    width: 0;
+  }
+
+  .Content-Column-Grid {
+
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 40% 60%;
+
+  }
+
+  .Column-Grid-Item:nth-child(2n-1) {
+    border-right: 1px solid black;
+    grid-column-start : 1;
+    grid-column-end: 6;
+  }
+  .Column-Grid-Item:nth-child(2n){
+    grid-column-start : 6;
+    grid-column-end: 9;
+  }
+
+  .Query-Input {
+    font-size: calc(2vw);
+    padding-left: 10px;
+    border: 2px solid #ccc;
+  } 
+
+  #SEARCH_ID {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .Card-Section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #CONTRY {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px black;
+  }
+
+  .Logo-Text {
+    font-size: 25px;
+  }
+  
+  #BAR{
+    display: initial;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .Grid-Wrapper__Appbar {
+    grid-template-columns: repeat(8,1fr);
+  }
+  .Appbar-Item:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+  }
+  .Appbar-Item:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 3;
+    grid-column-end: 6;
+  }
+  .Appbar-Item:nth-child(3){
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+  .Grid-Wrapper__Content {
+
+    z-index: 1;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 1fr;
+    height: calc(100% - 60px);
+    background-color: rgb(236, 239, 241);
+
+  }
+  .Content-Column-Side {
+
+    width : 0;
+    z-index: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    border : none;
+    background-color: rgba(255,255,255,0.6);
+    
+  }
+
+  .bar-showing{
+    width : 100%;
+    transition: width 500ms;
+  }
+  .bar-closing{
+    width: 0;
+  }
+
+  .Content-Column-Grid {
+
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 45% 55%;
+
+  }
+
+  .Column-Grid-Item:nth-child(2n-1) {
+    border-right: 1px solid black;
+    grid-column-start : 1;
+    grid-column-end: 6;
+  }
+  .Column-Grid-Item:nth-child(2n){
+    grid-column-start : 6;
+    grid-column-end: 9;
+  }
+
+  .Query-Input {
+    font-size: calc(2.7vw);
+    padding-left: 10px;
+    border: 2px solid #ccc;
+  } 
+
+  #SEARCH_ID {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .Card-Section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Card-Query-Row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+  }
+  #CONTRY {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px black;
+  }
+
+  .Logo-Text {
+    font-size: 20px;
+  }
+  
+  #BAR{
+    display: initial;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .Grid-Wrapper__Appbar {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    height : 35px;
+  }
+  .Appbar-Item:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+  }
+  .Appbar-Item:nth-child(2){
+    
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .Appbar-Item:nth-child(3){
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .Grid-Wrapper__Content {
+
+    z-index: 1;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 1fr;
+    height: calc(100% - 35px);
+    background-color: rgb(236, 239, 241);
+
+  }
+  .Content-Column-Side {
+
+    width : 0;
+    z-index: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    border : none;
+    background-color: rgba(255,255,255,0.6);
+    
+  }
+
+  .bar-showing{
+    width : 100%;
+    transition: width 500ms;
+  }
+  
+  .bar-closing{
+    width: 0;
+  }
+
+  .Content-Column-Grid {
+
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 250px 1fr;
+    overflow: auto;
+
+  }
+
+  .Column-Grid-Item:nth-child(1) {
+    border-right: 1px solid #ccc;
+    grid-column-start : 1;
+    grid-column-end: 5;
+  }
+  .Column-Grid-Item:nth-child(2){
+    grid-column-start : 5;
+    grid-column-end: 9;
+  }
+  .Column-Grid-Item:nth-child(3){
+    grid-column-start : 1;
+    grid-column-end: 9;
+    border-bottom : 1px solid #ccc;
+    grid-template-rows: 45px 250px;
+  }
+  .Column-Grid-Item:nth-child(4){
+    grid-column-start : 1;
+    grid-column-end: 9;
+  }
+
+  .Query-Input {
+    font-size: 6px;
+    padding-left: 10px;
+    border: 2px solid #ccc;
+  } 
+
+  #SEARCH_ID {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .Card-Section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Card-Query-Row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 20px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+  }
+  #CONTRY {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px black;
+  }
+
+  .Logo-Text {
+    font-size: 15px;
+  }
+  
+  #BAR{
+    display: initial;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+  }
+
+}

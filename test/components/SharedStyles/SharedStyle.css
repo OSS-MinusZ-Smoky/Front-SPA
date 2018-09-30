@@ -1,0 +1,45 @@
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Font-Roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.Font-NotoSansKr {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.Font-Inconsolata {
+  font-family: 'Inconsolata', sans-serif; 
+}
+.Font-Weight-Bold {
+  font-weight: bold;
+}
+
+.Font-Style-Italic {
+  font-style: italic
+}
+
+.Wrapper {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.Inline-Centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-center{
+  text-align: center;
+}
