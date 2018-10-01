@@ -4,10 +4,7 @@ Smoky. Front-SPA V1.0.0 - Alpha
 License
 -------
 
-MIT - babel,webpack,react,node-sass,express,nodejs,typeface-roboto
-
-ISC - react-js-google-maps
-
+MIT : babel,webpack,react,node-sass,express,nodejs,typeface-roboto,google-maps-react
 
 Description
 -----------
@@ -21,7 +18,6 @@ Description
 >이 저장소는 공공 스테이션에 설치된 장치들의 데이터를 시각화하여 정보를 이용가능한 모니터링 시스템 입니다. 자세히 설명하자면 통신이 가능한 아두이노 장치는 MQ-7센서를 장비하여 흡연에 대한 인식이 가능합니다. 스테이션에 설치된 아두이노 장치는 원격지 서버쪽으로 지속적으로 인식된 데이터를 전송합니다. 저희 웹 서비스는 그 서버로부터 데이터를 받아와 장치가 인식하고 있는 데이터를 이용할 수 있습니다. 
 
 >NPM 패키지 모듈은 저희 프로젝트에 필요한 모듈들을 자동적으로 파악하여 설치할 것입니다. 저희의 프로젝트에 바로 실행해보길 원하신다면 아래의 두 명령어 만으로 프로젝트 구동이 가능합니다.
-
 
 Installation
 ------------
