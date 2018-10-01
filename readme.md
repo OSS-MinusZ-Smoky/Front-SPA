@@ -1,11 +1,6 @@
 Smoky. Front-SPA V1.0.0 - Alpha
 ===============================
 
-License
--------
-
-MIT : babel,webpack,react,node-sass,express,nodejs,typeface-roboto,google-maps-react
-
 Description
 -----------
 
@@ -142,3 +137,12 @@ Change History
 
 >1. 웹 앱바 상단 우측 'Search...' 박스를 클릭하여 도시 정보를 내려받습니다. 입력 예 (안산 , 서울)
 >2. 나타난 카드 컴포넌트의 변화를 살펴볼 수 있으며 카드 컴포넌트를 클릭하면 차트를 통해 데이터 변동을 확인할 수 있습니다.
+
+License
+-------
+
+Module Licenses
+
+MIT : [ babel , webpack , react , node-sass , express ,nodejs ,typeface-roboto , google-maps-react ]
+
+해당 리포지토리는 Apache 2.0 라이선스를 적용하였습니다.
