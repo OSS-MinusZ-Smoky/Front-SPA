@@ -58,21 +58,23 @@ Directory Structure
 
 ```
 
-~~Tutorial~~ Dev Contribute
+Dev Contribute
 --------
-> In the current version, the react-router-dom module is no longer used, making full SPA operation difficult. The index page was implemented as react, but the next main page was purely developed by Vanilla JS. Therefore, if you want to develop an index page to reflect the changes, enter the following command and refresh the browser.
+> If you want to contribute through additional development in the current version, you can proceed with development through the following command and reflect the changes to the bundle.js file. The following commands are used in experimental development.
 
-
-> 현재 버전에서 react-router-dom 모듈을 더이상 사용하지 않기 때문에 완전한 SPA 작동이 어렵게 되었습니다. index 페이지는 react로 구현이 되었으나 다음의 main 페이지는 Vanilla JS로 순수하게 개발 하였습니다. 그러므로 인덱스 페이지를 개발하여 변동 사항을 반영해보고자 할 경우 다음의 명령어를 입력하고 브라우저를 리프레쉬 합니다.
+> 현재 버전에서 추가적인 개발을 통해 기여를 원할 경우 다음의 명령어를 통해 개발을 진행하고 변경된 내용을 bundle.js 한 파일에 반영시킬 수 있습니다. 실험적인 개발 과정에서는 다음의 명령어를 사용합니다.
 
 ~~~ 
-npm run bundle 
+npm run dev
 ~~~
 
-> If you want to develop a main page and make changes, simply refresh the page.
+> If the developed contents are satisfactory, you can reflect the whole development contents to the bundle.js file through the webpack module through the following command. The location of the bundle.js file is ./public/JS.
  
-> 메인 페이지를 개발하여 변동 사항을 해보고자 할 경우에는 단순히 페이지만 리프레시 하면 됩니다.
+> 개발된 내용이 만족스러운 경우, 다음의 명령어를 통해 전체 개발내용을 webpack 모듈을 통해  bundle.js로 한 파일에 반영할 수 있습니다. bundle.js 파일의 위치는 ./public/JS 입니다.
 
+~~~
+npm run bundle
+~~~
 
 # ScreenShots
 
