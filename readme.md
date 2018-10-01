@@ -145,4 +145,4 @@ Module Licenses
 
 MIT : [ babel , webpack , react , node-sass , express ,nodejs ,typeface-roboto , google-maps-react ]
 
-해당 리포지토리는 Apache 2.0 라이선스를 적용하였습니다.
+해당 리포지토리는 MIT 라이선스를 적용하였습니다.
