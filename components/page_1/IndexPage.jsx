@@ -52,7 +52,7 @@ class IndexPage extends React.Component{
     }
     else if(event.keyCode == 13){
 
-      fetch('http://18.191.27.239:9999?city='+this.state.cityInput).then((response)=>{
+      fetch('http://18.218.196.86:9999?city='+this.state.cityInput).then((response)=>{
       let Jres = response.json();
       return Jres;
     }).then((Jres)=>{
