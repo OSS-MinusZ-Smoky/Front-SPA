@@ -36,7 +36,7 @@ class MyCard extends React.Component{
   }
 
   statusChecker(props){
-    let Query = "http://18.191.27.239:9999/data?doh="+this.props.doh+"&city="+this.props.city+"&id="+this.props.id  
+    let Query = "http://18.218.196.86:9999/data?doh="+this.props.doh+"&city="+this.props.city+"&id="+this.props.id  
 
     fetch(Query).then((response)=>{
       let Jres = response.json()
